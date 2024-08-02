@@ -1,0 +1,19 @@
+// src/styles.scss
+
+// Importa o Bootstrap e FontAwesome
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
+// Define a cor primária
+:root {
+  --primary-color: rgba(69, 68, 68, 0.41); /* Azul claro */
+}
+
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
