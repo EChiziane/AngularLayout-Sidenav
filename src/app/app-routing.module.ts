@@ -1,14 +1,8 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
+import {ContentComponent} from "./content/content.component";
 
-import {AppComponent} from "./app.component";
-import {DriverComponent} from "./driver/driver.component";
-
-
-
-const routes: Routes = [
-  {path: '', component: DriverComponent}
-];
+const routes: Routes = [{path: '', component: ContentComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

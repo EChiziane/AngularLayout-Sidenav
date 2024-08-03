@@ -1,0 +1,15 @@
+/* Estilos específicos para o modal */
+mat-dialog-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}

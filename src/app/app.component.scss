@@ -1,72 +1,42 @@
-/* src/app/app.component.css */
-.app-container {
-  display: flex;
-  height: 100vh; /* Ocupa toda a altura da página */
+.example-container {
+  height: 100vh; // para garantir que o container ocupe toda a altura da página
 }
 
-.header {
-  height: 10vh; /* 10% da altura da página */
-  width: 90%; /* 90% da largura da página */
-  background-color: #007bff; /* Cor azul */
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 10%; /* Inicia 10% da esquerda */
-  z-index: 1000;
+.custom-drawer {
+  width: 12%; // define a largura do drawer como 12% da largura da página
 }
 
-.sidenav {
-  width: 10%; /* 10% da largura da página */
-  height: 100vh; /* Ocupa toda a altura da página */
-  background-color: #6c757d; /* Cor cinza */
-  color: #fff;
+mat-drawer-content {
+  width: 88%; // define a largura do conteúdo principal como 88%
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 2rem;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
 }
 
-.sidenav .nav-list {
-  list-style-type: none;
+.main-header {
+  background-color: #f8f9fa; // ajuste conforme necessário
+  padding: 10px; // ajuste conforme necessário
+  text-align: center; // ajuste conforme necessário
+  border-bottom: 1px solid #ddd; // ajuste conforme necessário
+}
+
+mat-nav-list {
   padding: 0;
-  width: 100%;
+}
+
+mat-list-item {
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px; // ajuste conforme necessário
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-.sidenav .nav-list li {
-  width: 100%;
-  margin: 1rem 0;
+mat-list-item:hover {
+  background-color: #e0e0e0; // ajuste conforme necessário
 }
 
-.sidenav .nav-list a {
-  color: #fff;
-  text-decoration: none;
-  display: block;
-  padding: 1rem;
-  width: 100%;
-  transition: background-color 0.3s;
-}
-
-.sidenav .nav-list a:hover {
-  background-color: #495057; /* Cor de fundo ao passar o mouse */
-}
-
-.content {
-  margin-top: 10vh; /* Adiciona margem superior igual à altura do header */
-  margin-left: 10%; /* Adiciona margem esquerda igual à largura do sidenav */
-  width: 90%; /* 90% da largura da página */
-  height: 90vh; /* 90% da altura da página */
-  background-color: #f8f9fa; /* Cor de fundo clara */
-  color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+.center-text {
+  width: 100%; // garante que o texto seja centralizado no item
 }

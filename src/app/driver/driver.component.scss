@@ -1,0 +1,102 @@
+.driver-container {
+  margin: 20px;
+}
+
+.driver-header {
+  background-color: #f8f9fa;
+  padding: 5px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+}
+
+.table-container {
+  position: relative;
+}
+
+.add-driver-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.add-driver-section button,
+.add-driver-section input {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
+
+.add-driver-section input {
+  width: 18%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+
+.add-driver-section input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.add-driver-section .add-button,
+.add-driver-section .print-button {
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
+
+.driver-table {
+  padding-top: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+th.mat-header-cell {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.625rem;
+}
+
+td.mat-cell {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 0.75rem;
+}
+
+tr.mat-header-row {
+  border-bottom: 2px solid #ddd;
+}
+
+tr.mat-row:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr.mat-row:hover {
+  background-color: #e9ecef;
+}
+
+button.mat-icon-button {
+  margin: 0 4px;
+  font-size: 0.75rem;
+}
+
+.mat-icon {
+  font-size: 0.875rem;
+}
