@@ -9,6 +9,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
 import { DriverComponent } from './driver/driver.component';
+import {MatSidenavModule} from "@angular/material/sidenav";
 
 
 
@@ -23,15 +24,16 @@ import { DriverComponent } from './driver/driver.component';
 
 
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatSidenavModule,
 
 
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

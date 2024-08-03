@@ -1,0 +1,40 @@
+/* src/app/driver/driver.component.css */
+.container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.table-container {
+  width: 90%; /* Define a largura da tabela para 90% da largura disponível */
+  margin: 0 auto; /* Centraliza a tabela horizontalmente */
+}
+
+.table {
+  width: 100%; /* Faz a tabela ocupar toda a largura da tabela-container */
+  margin-top: 1rem;
+  font-size: 0.875rem; /* Tamanho da fonte menor (13px) */
+  box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+}
+
+.table th,
+.table td {
+  text-align: center;
+  font-size: 0.875rem; /* Tamanho da fonte menor (13px) */
+}
+
+.table .btn {
+  font-size: 0.75rem; /* Tamanho da fonte dos botões */
+  margin-right: 0.5rem;
+}
