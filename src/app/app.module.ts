@@ -39,6 +39,8 @@ import {
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatDrawer, MatDrawerContainer, MatDrawerContent} from "@angular/material/sidenav";
 import {MatListItem, MatNavList} from "@angular/material/list";
+import { DetailsDriverComponent } from './driver/details-driver/details-driver.component';
+import {HttpClient, HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import {MatListItem, MatNavList} from "@angular/material/list";
     HeaderComponent,
     DriverComponent,
     ContentComponent,
-    AddDriverComponent
+    AddDriverComponent,
+    DetailsDriverComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +91,8 @@ import {MatListItem, MatNavList} from "@angular/material/list";
     MatDrawer,
     MatNavList,
     MatDrawerContainer,
-    MatListItem
+    MatListItem,
+HttpClientModule
 
   ],
   providers: [

@@ -1,61 +1,66 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .driver-container {
-  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda a altura da viewport */
+  margin: 0; /* Remove margens para evitar overflow */
 }
 
 .driver-header {
   background-color: #f8f9fa;
-  padding: 5px;
+  padding: 10px 0; /* Ajuste do padding para mais espaço */
   text-align: center;
   border-bottom: 1px solid #ddd;
-  margin-bottom: 20px;
-  font-size: 0.75rem;
+  height: 5%; /* Ocupa 5% do container */
+  box-sizing: border-box;
 }
 
-.table-container {
-  position: relative;
-}
-
-.add-driver-section {
+.driver-actions {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 20px;
+  margin-top: 10px; /* Espaço entre o header e as ações */
+  height: 15%; /* Ocupa 15% do container */
+  box-sizing: border-box;
+  padding: 0 20px;
 }
 
-.add-driver-section button,
-.add-driver-section input {
-  display: flex;
-  align-items: center;
+.driver-actions .search-input {
+  height: 26px; /* Ajusta a altura para coincidir com a altura dos botões */
+  padding: 6px 12px; /* Ajusta o padding para coincidir com a altura dos botões */
+  border: 1px solid #ccc;
+  border-radius: 4px;
   font-size: 0.75rem;
   margin-right: 10px;
 }
 
-.add-driver-section input {
-  width: 18%;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 0.75rem;
-}
-
-.add-driver-section input:focus {
+.driver-actions .search-input:focus {
   outline: none;
   border-color: #007bff;
 }
 
-.add-driver-section .add-button,
-.add-driver-section .print-button {
-  display: flex;
-  align-items: center;
+.driver-actions .add-driver-button,
+.driver-actions .print-button {
+  height: 36px; /* Ajusta a altura dos botões */
   font-size: 0.75rem;
-  margin-right: 10px;
+}
+
+.driver-table-container {
+  flex: 1; /* Ocupa o restante do espaço disponível */
+  overflow: auto; /* Permite rolagem interna se necessário */
+  padding: 20px; /* Espaço interno */
+  box-sizing: border-box;
 }
 
 .driver-table {
-  padding-top: 10px;
+  width: 100%;
   background-color: #f1f1f1;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 table {

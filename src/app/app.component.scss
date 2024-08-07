@@ -1,42 +1,47 @@
 .example-container {
-  height: 100vh; // para garantir que o container ocupe toda a altura da página
+  height: 100vh; /* Garante que o container ocupe toda a altura da página */
 }
 
 .custom-drawer {
-  width: 12%; // define a largura do drawer como 12% da largura da página
+  width: 12%; /* Define a largura do drawer como 12% da largura da página */
+  display: flex;
+  flex-direction: column; /* Empilha os itens verticalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  align-items: center; /* Alinha os itens no centro horizontalmente */
 }
 
 mat-drawer-content {
-  width: 88%; // define a largura do conteúdo principal como 88%
+  width: 88%; /* Define a largura do conteúdo principal como 88% */
   display: flex;
   flex-direction: column;
 }
 
 .main-header {
-  background-color: #f8f9fa; // ajuste conforme necessário
-  padding: 10px; // ajuste conforme necessário
-  text-align: center; // ajuste conforme necessário
-  border-bottom: 1px solid #ddd; // ajuste conforme necessário
+  background-color: #f8f9fa; /* Ajuste conforme necessário */
+  padding: 10px; /* Ajuste conforme necessário */
+  text-align: center; /* Ajuste conforme necessário */
+  border-bottom: 1px solid #ddd; /* Ajuste conforme necessário */
 }
 
 mat-nav-list {
   padding: 0;
+  width: 100%; /* Garante que o nav-list ocupe toda a largura disponível */
 }
 
 mat-list-item {
   padding: 15px;
   cursor: pointer;
-  font-size: 16px; // ajuste conforme necessário
+  font-size: 16px; /* Ajuste conforme necessário */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
   text-align: center;
 }
 
 mat-list-item:hover {
-  background-color: #e0e0e0; // ajuste conforme necessário
+  background-color: #e0e0e0; /* Ajuste conforme necessário */
 }
 
 .center-text {
-  width: 100%; // garante que o texto seja centralizado no item
+  width: 100%; /* Garante que o texto seja centralizado no item */
 }

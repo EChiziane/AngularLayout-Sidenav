@@ -1,10 +1,10 @@
 <div class="driver-container">
   <div class="driver-header">
-    <h2>Lista de Motoristas</h2>
+    <h5>Lista de Motoristas</h5>
   </div>
-  <div class="add-driver-section">
-    <input type="text" placeholder="Pesquisar" (keyup)="applyFilter($event)">
-    <button (click)="openDialog('0ms','0ms')" class="add-button" color="primary" mat-raised-button>
+  <div class="driver-actions">
+    <input type="text" placeholder="Pesquisar" (keyup)="applyFilter($event)" class="search-input">
+    <button (click)="openDialog('0ms','0ms')" class="add-driver-button" color="primary" mat-raised-button>
       <i class="fas fa-plus"></i>
       Adicionar Driver
     </button>
@@ -13,13 +13,9 @@
       Imprimir
     </button>
   </div>
-  <div class="table-container">
+  <div class="driver-table-container">
     <table [dataSource]="dataSource" class="driver-table" mat-table>
       <!-- Colunas da tabela -->
-      <ng-container matColumnDef="id">
-        <th *matHeaderCellDef mat-header-cell>ID</th>
-        <td *matCellDef="let driver" mat-cell>{{ driver.id }}</td>
-      </ng-container>
 
       <ng-container matColumnDef="name">
         <th *matHeaderCellDef mat-header-cell>Nome</th>

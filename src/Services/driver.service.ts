@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Driver} from "../Model/driver";
 import {take} from "rxjs/operators";
 import {environment} from "../environments/environments";
+import {HttpClient} from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root'

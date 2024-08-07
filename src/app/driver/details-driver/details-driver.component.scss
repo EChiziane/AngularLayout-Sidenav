@@ -1,0 +1,65 @@
+/* driver-details.component.scss */
+.driver-details-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
+
+.header-section {
+  background-color: #007bff; /* Cor do header */
+  color: #fff;
+  padding: 16px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.content-section {
+  padding: 20px;
+  background-color: #f1f1f1; /* Cor de fundo do conteúdo */
+  overflow-y: auto; /* Allows scrolling if content overflows */
+  flex: 1; /* Allows content section to grow and fill available space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes the button to the bottom */
+}
+
+.driver-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between columns */
+}
+
+.info-column {
+  background-color: #fff; /* Cor de fundo das colunas de informações */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1; /* Allows columns to grow equally */
+}
+
+.info-column p {
+  margin: 8px 0;
+}
+
+.button-section {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.back-button {
+  background-color: #007bff; /* Cor do botão */
+  color: #fff; /* Cor do texto do botão */
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+  }
+}
