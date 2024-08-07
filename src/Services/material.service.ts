@@ -9,7 +9,7 @@ import {environment} from "../environments/environments";
   providedIn: 'root'
 })
 export class MaterialService {
-  private baseURL = environment.baseURL+"/materials";
+  private baseURL = environment.baseURL + "/materials";
 
   constructor(private http: HttpClient) {
   }

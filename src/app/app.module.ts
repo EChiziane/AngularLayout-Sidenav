@@ -39,8 +39,9 @@ import {
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatDrawer, MatDrawerContainer, MatDrawerContent} from "@angular/material/sidenav";
 import {MatListItem, MatNavList} from "@angular/material/list";
-import { DetailsDriverComponent } from './driver/details-driver/details-driver.component';
-import {HttpClient, HttpClientModule} from "@angular/common/http";
+import {DetailsDriverComponent} from './driver/details-driver/details-driver.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -92,7 +93,8 @@ import {HttpClient, HttpClientModule} from "@angular/common/http";
     MatNavList,
     MatDrawerContainer,
     MatListItem,
-HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
 
   ],
   providers: [

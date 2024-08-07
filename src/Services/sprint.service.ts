@@ -10,7 +10,7 @@ import {environment} from "../environments/environments";
 })
 
 export class SprintService {
-  private baseURL = environment.baseURL+"/sprints";
+  private baseURL = environment.baseURL + "/sprints";
 
   constructor(private http: HttpClient) {
   }

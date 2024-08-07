@@ -9,7 +9,7 @@ import {HttpClient} from "@angular/common/http";
   providedIn: 'root'
 })
 export class DriverService {
-  private baseURL = environment.baseURL+"/drivers";
+  private baseURL = environment.baseURL + "/drivers";
 
   constructor(private http: HttpClient) {
   }
@@ -18,11 +18,11 @@ export class DriverService {
     return this.http.get<Driver[]>(this.baseURL)
   }
 
-  public deleteDriver(id: number): Observable<Driver> {
+  public deleteDriver(id: string): Observable<Driver> {
     return this.http.delete<Driver>(`${this.baseURL}/${id}`)
   }
 
-  public getDriverById(id: number): Observable<Driver> {
+  public getDriverById(id: string): Observable<Driver> {
     return this.http.get<Driver>(`${this.baseURL}/${id}`);
   }
 
@@ -30,8 +30,12 @@ export class DriverService {
     return this.http.post<Driver>(this.baseURL, driver).pipe(take(1))
   }
 
-  public getDriveById(id: number): Observable<Driver> {
+  public getDriveById(id: string): Observable<Driver> {
     return this.http.get<Driver>(`${this.baseURL}/${id}`);
+  }
+
+  updateDriver(driver: Driver): Observable<Driver> {
+    return this.http.put<Driver>(`${this.baseURL}/${driver.id}`, driver);
   }
 
 }

@@ -10,7 +10,7 @@ import {environment} from "../environments/environments";
   providedIn: 'root'
 })
 export class CarloadService {
-  private baseURL = environment.baseURL+"/carloads";
+  private baseURL = environment.baseURL + "/carloads";
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {
   }

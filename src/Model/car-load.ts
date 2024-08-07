@@ -10,7 +10,7 @@ export interface CarLoad {
   managerExpenses: number;
   purchaseMoney: number,
   toll: number;
-  gain:number;
+  gain: number;
   sprintName: string;
   driverName: string;
   managerName: string;

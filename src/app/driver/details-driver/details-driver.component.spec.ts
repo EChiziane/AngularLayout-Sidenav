@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DetailsDriverComponent } from './details-driver.component';
+import {DetailsDriverComponent} from './details-driver.component';
 
 describe('DetailsDriverComponent', () => {
   let component: DetailsDriverComponent;
@@ -10,7 +10,7 @@ describe('DetailsDriverComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [DetailsDriverComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(DetailsDriverComponent);
     component = fixture.componentInstance;

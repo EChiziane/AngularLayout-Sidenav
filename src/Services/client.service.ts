@@ -9,7 +9,8 @@ import {environment} from "../environments/environments";
   providedIn: 'root'
 })
 export class ClientService {
-  private baseURL = environment.baseURL+"/clients";
+  private baseURL = environment.baseURL + "/clients";
+
   constructor(private http: HttpClient) {
   }
 

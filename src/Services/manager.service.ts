@@ -12,7 +12,7 @@ import {environment} from "../environments/environments";
 export class ManagerService {
 
 
-  private baseURL = environment.baseURL+"/managers";
+  private baseURL = environment.baseURL + "/managers";
 
   constructor(private http: HttpClient) {
   }
