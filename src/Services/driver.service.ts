@@ -4,6 +4,7 @@ import {Driver} from "../Model/driver";
 import {take} from "rxjs/operators";
 import {environment} from "../environments/environments";
 import {HttpClient} from "@angular/common/http";
+import {FormControl, ɵFormGroupValue, ɵTypedOrUntyped} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
@@ -34,7 +35,21 @@ export class DriverService {
     return this.http.get<Driver>(`${this.baseURL}/${id}`);
   }
 
-  updateDriver(driver: Driver): Observable<Driver> {
+  updateDriver(driver: ɵTypedOrUntyped<{
+    phoneNumber: FormControl<string | null>;
+    vehiclePlate: FormControl<string | null>;
+    name: FormControl<string | null>;
+    vehicleModel: FormControl<string | null>;
+    id: FormControl<string | null>;
+    birthDate: FormControl<Date | null>
+  }, ɵFormGroupValue<{
+    phoneNumber: FormControl<string | null>;
+    vehiclePlate: FormControl<string | null>;
+    name: FormControl<string | null>;
+    vehicleModel: FormControl<string | null>;
+    id: FormControl<string | null>;
+    birthDate: FormControl<Date | null>
+  }>, any>): Observable<Driver> {
     return this.http.put<Driver>(`${this.baseURL}/${driver.id}`, driver);
   }
 

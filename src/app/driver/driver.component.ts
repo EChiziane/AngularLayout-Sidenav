@@ -2,9 +2,11 @@ import {ChangeDetectionStrategy, Component, OnInit, ViewChild} from '@angular/co
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
 import {MatDialog} from '@angular/material/dialog';
+import {MatSnackBar} from '@angular/material/snack-bar'; // Importar MatSnackBar
 import {AddDriverComponent} from './add-driver/add-driver.component';
 import {DriverService} from "../../Services/driver.service";
 import {Driver} from "../../Model/driver";
+import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component";
 
 @Component({
   selector: 'app-driver',
@@ -20,7 +22,8 @@ export class DriverComponent implements OnInit {
 
   constructor(
     private dialog: MatDialog,
-    private driverService: DriverService
+    private driverService: DriverService,
+    private snackBar: MatSnackBar // Injetar MatSnackBar
   ) {
   }
 
@@ -67,9 +70,37 @@ export class DriverComponent implements OnInit {
     });
   }
 
-  public deleteDriver(id: string): void {
-    this.driverService.deleteDriver(id).subscribe(() => {
-      this.getDrivers();
+  public confirmDeleteDriver(id: string): void {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+      width: '400px',
+      data: {title: 'Confirmação', message: 'Você tem certeza que deseja apagar este motorista?'}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.deleteDriver(id);
+      }
+    });
+  }
+
+  private deleteDriver(id: string): void {
+    this.driverService.deleteDriver(id).subscribe(
+      () => {
+        this.getDrivers();
+        this.showSnackbar('Motorista deletado com sucesso!', 'success');
+      },
+      error => {
+        this.showSnackbar('Erro ao deletar motorista!', 'error');
+      }
+    );
+  }
+
+  private showSnackbar(message: string, type: string): void {
+    this.snackBar.open(message, '', {
+      duration: 3000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      panelClass: type === 'success' ? 'snackbar-success' : 'snackbar-error'
     });
   }
 }

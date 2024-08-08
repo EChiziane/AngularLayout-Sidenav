@@ -3,14 +3,26 @@
     <h5>Lista de Motoristas</h5>
   </div>
   <div class="driver-actions">
-    <input (keyup)="applyFilter($event)" class="search-input" placeholder="Pesquisar" type="text">
-    <button (click)="openDialog('0ms','0ms')" class="add-driver-button" color="primary" mat-raised-button>
-      <i class="fas fa-plus"></i>
-      Adicionar Driver
+    <input
+      (keyup)="applyFilter($event)"
+      class="search-input"
+      placeholder="Pesquisar"
+      type="text"
+    />
+    <button
+      (click)="openDialog('0ms', '0ms')"
+      class="add-driver-button"
+      color="primary"
+      mat-raised-button
+    >
+      <i class="fas fa-plus"></i> Adicionar Driver
     </button>
-    <button class="print-button" color="accent" mat-raised-button>
-      <i class="fas fa-print"></i>
-      Imprimir
+    <button
+      class="print-button"
+      color="accent"
+      mat-raised-button
+    >
+      <i class="fas fa-print"></i> Imprimir
     </button>
   </div>
   <div class="driver-table-container">
@@ -24,37 +36,30 @@
         <th *matHeaderCellDef mat-header-cell>Nome</th>
         <td *matCellDef="let driver" mat-cell>{{ driver.name }}</td>
       </ng-container>
-
       <ng-container matColumnDef="birthDate">
         <th *matHeaderCellDef mat-header-cell>Data de Nascimento</th>
         <td *matCellDef="let driver" mat-cell>{{ driver.birthDate | date }}</td>
       </ng-container>
-
       <ng-container matColumnDef="phoneNumber">
         <th *matHeaderCellDef mat-header-cell>Telefone</th>
         <td *matCellDef="let driver" mat-cell>{{ driver.phoneNumber }}</td>
       </ng-container>
-
       <ng-container matColumnDef="vehiclePlate">
         <th *matHeaderCellDef mat-header-cell>Placa do Veículo</th>
         <td *matCellDef="let driver" mat-cell>{{ driver.vehiclePlate }}</td>
       </ng-container>
-
       <ng-container matColumnDef="vehicleModel">
         <th *matHeaderCellDef mat-header-cell>Modelo do Veículo</th>
         <td *matCellDef="let driver" mat-cell>{{ driver.vehicleModel }}</td>
       </ng-container>
-
       <ng-container matColumnDef="createdBy">
         <th *matHeaderCellDef mat-header-cell>Criado Por</th>
         <td *matCellDef="let driver" mat-cell>{{ driver.createdBy }}</td>
       </ng-container>
-
       <ng-container matColumnDef="createdAt">
         <th *matHeaderCellDef mat-header-cell>Criado Em</th>
         <td *matCellDef="let driver" mat-cell>{{ driver.createdAt | date }}</td>
       </ng-container>
-
       <ng-container matColumnDef="actions">
         <th *matHeaderCellDef mat-header-cell>Ações</th>
         <td *matCellDef="let driver" mat-cell>
@@ -64,20 +69,19 @@
           <button (click)="openEditDialog(driver.id, '0ms', '0ms')" color="accent" mat-icon-button>
             <i class="fas fa-edit"></i>
           </button>
-          <button (click)="deleteDriver(driver.id)" color="warn" mat-icon-button>
+          <button (click)="confirmDeleteDriver(driver.id)" color="warn" mat-icon-button>
             <i class="fas fa-trash"></i>
           </button>
         </td>
       </ng-container>
-
       <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
       <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
     </table>
-
-    <mat-paginator [length]="dataSource.data.length"
-                   [pageSizeOptions]="[5, 10, 25, 100]"
-                   [pageSize]="10"
-                   aria-label="Select page">
-    </mat-paginator>
+    <mat-paginator
+      [length]="dataSource.data.length"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      [pageSize]="10"
+      aria-label="Select page"
+    ></mat-paginator>
   </div>
 </div>

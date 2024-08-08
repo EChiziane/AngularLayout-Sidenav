@@ -75,7 +75,7 @@ th.mat-header-cell {
   font-weight: bold;
   text-align: center;
   padding: 5px;
-  font-size: 0.625rem;
+  font-size: 0.625rem; /* Menor tamanho de fonte para o header */
 }
 
 td.mat-cell {
@@ -99,9 +99,19 @@ tr.mat-row:hover {
 
 button.mat-icon-button {
   margin: 0 4px;
-  font-size: 0.75rem;
+  font-size: 0.75rem; /* Menor tamanho de fonte para os botões de ícones */
 }
 
 .mat-icon {
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Ajusta o tamanho dos ícones */
+}
+
+.snackbar-success {
+  background-color: green;
+  color: white;
+}
+
+.snackbar-error {
+  background-color: red;
+  color: white;
 }

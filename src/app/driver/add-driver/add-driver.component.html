@@ -1,4 +1,4 @@
-<h2 class="centered-header" mat-dialog-title>Adicionar Motorista</h2>
+<h2 class="centered-header" mat-dialog-title>{{ isEditMode ? 'Editar Motorista' : 'Adicionar Motorista' }}</h2>
 <mat-dialog-content class="mat-typography full-page-content">
   <form (ngSubmit)="createOrUpdateDriver()" [formGroup]="profileForm" class="full-width-form">
     <mat-form-field appearance="outline" class="full-width-input">
@@ -31,5 +31,7 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button (click)="onClose()" mat-button>Fechar</button>
-  <button (click)="createOrUpdateDriver()" color="primary" mat-raised-button type="submit">Adicionar</button>
+  <button (click)="createOrUpdateDriver()" color="primary" mat-raised-button
+          type="submit">{{ isEditMode ? 'Editar' : 'Adicionar' }}
+  </button>
 </mat-dialog-actions>

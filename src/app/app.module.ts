@@ -42,6 +42,7 @@ import {MatListItem, MatNavList} from "@angular/material/list";
 import {DetailsDriverComponent} from './driver/details-driver/details-driver.component';
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
+import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     DriverComponent,
     ContentComponent,
     AddDriverComponent,
-    DetailsDriverComponent
+    DetailsDriverComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
