@@ -1,0 +1,23 @@
+<h2 class="centered-header" mat-dialog-title>{{ isEditMode ? 'Editar Gerente' : 'Adicionar Gerente' }}</h2>
+<mat-dialog-content class="mat-typography full-page-content">
+  <form (ngSubmit)="createOrUpdateManager()" [formGroup]="profileForm" class="full-width-form">
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome</mat-label>
+      <input formControlName="name" matInput placeholder="Nome do Gerente">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Telefone</mat-label>
+      <input formControlName="phoneNumber" matInput placeholder="Telefone">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="Email">
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button (click)="onClose()" mat-button>Fechar</button>
+  <button (click)="createOrUpdateManager()" color="primary" mat-raised-button type="submit">{{ isEditMode ? 'Editar' : 'Adicionar' }}</button>
+</mat-dialog-actions>

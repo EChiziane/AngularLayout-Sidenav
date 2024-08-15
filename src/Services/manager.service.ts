@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {take} from "rxjs/operators";
 import {Manager} from "../Model/manager";
 import {environment} from "../environments/environments";
+import {FormControl, ɵFormGroupValue, ɵTypedOrUntyped} from "@angular/forms";
 
 
 @Injectable({
@@ -21,11 +22,11 @@ export class ManagerService {
     return this.http.get<Manager[]>(this.baseURL);
   }
 
-  public deleteManager(id: number): Observable<Manager> {
+  public deleteManager(id: string): Observable<Manager> {
     return this.http.delete<Manager>(`${this.baseURL}/${id}`);
   }
 
-  public getManagerById(id: number): Observable<Manager> {
+  public getManagerById(id: string): Observable<Manager> {
     return this.http.get<Manager>(`${this.baseURL}/${id}`);
   }
 
@@ -34,6 +35,20 @@ export class ManagerService {
       headers: new HttpHeaders().set('Content-Type', 'application/json'),
     };
     return this.http.post<Manager>(this.baseURL, material, options).pipe(take(1));
+  }
+
+  updateManager(manager: ɵTypedOrUntyped<{
+    phoneNumber: FormControl<string | null>;
+    name: FormControl<string | null>;
+    id: FormControl<string | null>;
+    email: FormControl<string | null>
+  }, ɵFormGroupValue<{
+    phoneNumber: FormControl<string | null>;
+    name: FormControl<string | null>;
+    id: FormControl<string | null>;
+    email: FormControl<string | null>
+  }>, any>): Observable<Manager> {
+    return this.http.put<Manager>(`${this.baseURL}/${manager.id}`, manager);
   }
 
 }

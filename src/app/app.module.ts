@@ -4,10 +4,6 @@ import {BrowserModule, provideClientHydration} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
-import {DialogAnimationsExampleComponent} from './dialog-animations-example/dialog-animations-example.component';
-import {
-  DialogAnimationsExampleDialogComponent
-} from './dialog-animations-example-dialog/dialog-animations-example-dialog.component';
 import {MatButton, MatIconButton} from "@angular/material/button";
 import {MatDialogActions, MatDialogClose, MatDialogContent, MatDialogTitle} from "@angular/material/dialog";
 import {SidebarComponent} from "./sidebar/sidebar.component";
@@ -43,20 +39,28 @@ import {DetailsDriverComponent} from './driver/details-driver/details-driver.com
 import {HttpClientModule} from "@angular/common/http";
 import {ReactiveFormsModule} from "@angular/forms";
 import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
+import { ManagerComponent } from './manager/manager.component';
+import { AddManagerComponent } from './manager/add-manager/add-manager.component';
+import { DetailsManagerComponent } from './manager/details-manager/details-manager.component';
+import { MaterialComponent } from './material/material.component';
+import { AddMaterialComponent } from './material/add-material/add-material.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogAnimationsExampleComponent,
-    DialogAnimationsExampleDialogComponent,
     SidebarComponent,
     HeaderComponent,
     DriverComponent,
     ContentComponent,
     AddDriverComponent,
     DetailsDriverComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    ManagerComponent,
+    AddManagerComponent,
+    DetailsManagerComponent,
+    MaterialComponent,
+    AddMaterialComponent
   ],
   imports: [
     BrowserModule,

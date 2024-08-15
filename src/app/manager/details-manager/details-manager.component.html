@@ -1,0 +1,22 @@
+<div class="manager-details-container">
+  <header class="header-section">
+    <h4>Detalhes do Gerente</h4>
+  </header>
+  <div class="button-section">
+    <button [routerLink]="['/manager']" aria-label="Voltar para a lista de gerentes" class="back-button">Voltar</button>
+  </div>
+  <main *ngIf="manager" class="content-section">
+    <section class="manager-info">
+      <article class="info-column">
+        <p><strong>ID:</strong> {{ manager.id }}</p>
+        <p><strong>Nome:</strong> {{ manager.name }}</p>
+        <p><strong>Telefone:</strong> {{ manager.phoneNumber }}</p>
+        <p><strong>Email:</strong> {{ manager.email }}</p>
+      </article>
+      <article class="info-column">
+        <p><strong>Criado Por:</strong> {{ manager.createdBy }}</p>
+        <p><strong>Criado Em:</strong> {{ manager.createdAt | date }}</p>
+      </article>
+    </section>
+  </main>
+</div>

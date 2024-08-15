@@ -1,0 +1,93 @@
+.material-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+.material-header {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.material-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.material-actions .search-input {
+  height: 26px;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
+
+.material-actions .add-material-button {
+  height: 36px;
+  font-size: 0.75rem;
+}
+
+.material-table-container {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+}
+
+.material-table {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+th.mat-header-cell {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+}
+
+td.mat-cell {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 6px;
+}
+
+tr.mat-header-row {
+  border-bottom: 2px solid #ddd;
+}
+
+tr.mat-row:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr.mat-row:hover {
+  background-color: #e9ecef;
+}
+
+button.mat-icon-button {
+  margin: 0 4px;
+  font-size: 0.75rem;
+}
+
+.mat-icon {
+  font-size: 0.875rem;
+}
+
+.snackbar-success {
+  background-color: green;
+  color: white;
+}
+
+.snackbar-error {
+  background-color: red;
+  color: white;
+}
+

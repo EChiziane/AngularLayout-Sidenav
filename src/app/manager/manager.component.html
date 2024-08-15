@@ -1,0 +1,79 @@
+<div class="manager-container">
+  <div class="manager-header">
+    <h5>Lista de Gerentes</h5>
+  </div>
+  <div class="manager-actions">
+    <input
+      (keyup)="applyFilter($event)"
+      class="search-input"
+      placeholder="Pesquisar"
+      type="text"
+    />
+    <button
+      (click)="openDialog('0ms', '0ms')"
+      class="add-manager-button"
+      color="primary"
+      mat-raised-button
+    >
+      <i class="fas fa-plus"></i> Adicionar Manager
+    </button>
+    <button
+      class="print-button"
+      color="accent"
+      mat-raised-button
+    >
+      <i class="fas fa-print"></i> Imprimir
+    </button>
+  </div>
+  <div class="manager-table-container">
+    <table [dataSource]="dataSource" class="manager-table" mat-table>
+      <!-- Colunas da tabela -->
+      <ng-container matColumnDef="id">
+        <th *matHeaderCellDef mat-header-cell>No.</th>
+        <td *matCellDef="let manager" mat-cell>{{ manager.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="name">
+        <th *matHeaderCellDef mat-header-cell>Nome</th>
+        <td *matCellDef="let manager" mat-cell>{{ manager.name }}</td>
+      </ng-container>
+      <ng-container matColumnDef="phoneNumber">
+        <th *matHeaderCellDef mat-header-cell>Telefone</th>
+        <td *matCellDef="let manager" mat-cell>{{ manager.phoneNumber }}</td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th *matHeaderCellDef mat-header-cell>Email</th>
+        <td *matCellDef="let manager" mat-cell>{{ manager.email }}</td>
+      </ng-container>
+      <ng-container matColumnDef="createdBy">
+        <th *matHeaderCellDef mat-header-cell>Criado Por</th>
+        <td *matCellDef="let manager" mat-cell>{{ manager.createdBy }}</td>
+      </ng-container>
+      <ng-container matColumnDef="createdAt">
+        <th *matHeaderCellDef mat-header-cell>Criado Em</th>
+        <td *matCellDef="let manager" mat-cell>{{ manager.createdAt | date }}</td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th *matHeaderCellDef mat-header-cell>Ações</th>
+        <td *matCellDef="let manager" mat-cell>
+          <button [routerLink]="['/manager-detail', manager.id]" color="primary" mat-icon-button>
+            <i class="fas fa-eye"></i>
+          </button>
+          <button (click)="openEditDialog(manager.id, '0ms', '0ms')" color="accent" mat-icon-button>
+            <i class="fas fa-edit"></i>
+          </button>
+          <button (click)="confirmDeleteManager(manager.id)" color="warn" mat-icon-button>
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </ng-container>
+      <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+      <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+    <mat-paginator
+      [length]="dataSource.data.length"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      [pageSize]="10"
+      aria-label="Select page"
+    ></mat-paginator>
+  </div>
+</div>

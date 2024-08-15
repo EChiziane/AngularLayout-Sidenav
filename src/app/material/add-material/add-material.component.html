@@ -1,0 +1,21 @@
+<h2 class="centered-header" mat-dialog-title>{{ isEditMode ? 'Editar Material' : 'Adicionar Material' }}</h2>
+<mat-dialog-content class="mat-typography full-page-content">
+  <form (ngSubmit)="createOrUpdateMaterial()" [formGroup]="profileForm" class="full-width-form">
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome</mat-label>
+      <input formControlName="name" matInput placeholder="Nome do Material">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Descrição</mat-label>
+      <input formControlName="description" matInput placeholder="Descrição do Material">
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button (click)="onClose()" mat-button>Fechar</button>
+  <button (click)="createOrUpdateMaterial()" color="primary" mat-raised-button
+          type="submit">{{ isEditMode ? 'Editar' : 'Adicionar' }}
+  </button>
+</mat-dialog-actions>

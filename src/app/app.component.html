@@ -1,9 +1,10 @@
 <mat-drawer-container class="example-container">
   <mat-drawer class="custom-drawer" mode="side" opened>
     <mat-nav-list>
-      <mat-list-item class="center-text">Driver</mat-list-item>
-      <mat-list-item class="center-text">Client</mat-list-item>
-      <mat-list-item class="center-text">Manager</mat-list-item>
+      <mat-list-item class="center-text" [routerLink]="['/driver']" >Driver</mat-list-item>
+      <mat-list-item class="center-text" [routerLink]="['/client']">Client</mat-list-item>
+      <mat-list-item class="center-text" [routerLink]="['/manager']">Manager</mat-list-item>
+      <mat-list-item class="center-text" [routerLink]="['/material']">Material</mat-list-item>
       <mat-list-item class="center-text">Carload</mat-list-item>
     </mat-nav-list>
   </mat-drawer>

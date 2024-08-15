@@ -1,0 +1,117 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.manager-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda a altura da viewport */
+  margin: 0; /* Remove margens para evitar overflow */
+}
+
+.manager-header {
+  background-color: #f8f9fa;
+  padding: 10px 0; /* Ajuste do padding para mais espaço */
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  height: 5%; /* Ocupa 5% do container */
+  box-sizing: border-box;
+}
+
+.manager-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 10px; /* Espaço entre o header e as ações */
+  height: 15%; /* Ocupa 15% do container */
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+.manager-actions .search-input {
+  height: 26px; /* Ajusta a altura para coincidir com a altura dos botões */
+  padding: 6px 12px; /* Ajusta o padding para coincidir com a altura dos botões */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  margin-right: 10px;
+}
+
+.manager-actions .search-input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.manager-actions .add-manager-button,
+.manager-actions .print-button {
+  height: 36px; /* Ajusta a altura dos botões */
+  font-size: 0.75rem;
+}
+
+.manager-table-container {
+  flex: 1; /* Ocupa o restante do espaço disponível */
+  overflow: auto; /* Permite rolagem interna se necessário */
+  padding: 20px; /* Espaço interno */
+  box-sizing: border-box;
+}
+
+.manager-table {
+  width: 100%;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+th.mat-header-cell {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.625rem; /* Menor tamanho de fonte para o header */
+}
+
+td.mat-cell {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 6px;
+  font-size: 0.75rem;
+}
+
+tr.mat-header-row {
+  border-bottom: 2px solid #ddd;
+}
+
+tr.mat-row:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr.mat-row:hover {
+  background-color: #e9ecef;
+}
+
+button.mat-icon-button {
+  margin: 0 4px;
+  font-size: 0.75rem; /* Menor tamanho de fonte para os botões de ícones */
+}
+
+.mat-icon {
+  font-size: 0.875rem; /* Ajusta o tamanho dos ícones */
+}
+
+.snackbar-success {
+  background-color: green;
+  color: white;
+}
+
+.snackbar-error {
+  background-color: red;
+  color: white;
+}
