@@ -1,0 +1,92 @@
+<div class="carload-container">
+  <div class="carload-header">
+    <h5>Lista de Carradas</h5>
+  </div>
+  <div class="carload-actions">
+    <input
+      (keyup)="applyFilter($event)"
+      class="search-input"
+      placeholder="Pesquisar"
+      type="text"
+    />
+    <button
+      (click)="openDialog('0ms', '0ms')"
+      class="add-carload-button"
+      color="primary"
+      mat-raised-button
+    >
+      <i class="fas fa-plus"></i> Adicionar Carload
+    </button>
+    <button
+      class="print-button"
+      color="accent"
+      mat-raised-button
+    >
+      <i class="fas fa-print"></i> Imprimir
+    </button>
+  </div>
+  <div class="carload-table-container">
+    <table [dataSource]="dataSource" class="carload-table" mat-table>
+      <!-- Colunas da tabela -->
+      <ng-container matColumnDef="createdAt">
+        <th *matHeaderCellDef mat-header-cell>Criado Em</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.createdAt | date }}</td>
+      </ng-container>
+      <ng-container matColumnDef="destination">
+        <th *matHeaderCellDef mat-header-cell>Destino</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.destination }}</td>
+      </ng-container>
+      <ng-container matColumnDef="materialName">
+        <th *matHeaderCellDef mat-header-cell>Nome do Material</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.materialName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="clientName">
+        <th *matHeaderCellDef mat-header-cell>Nome do Cliente</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.clientName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="clientNumber">
+        <th *matHeaderCellDef mat-header-cell>Numero do Cliente</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.clientNumber }}
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="totalExpenses">
+        <th *matHeaderCellDef mat-header-cell>Gastos</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.totalExpenses | currency:'MZN':'symbol':'1.0-2' }}</td>
+      </ng-container>
+      <ng-container matColumnDef="earnings">
+        <th *matHeaderCellDef mat-header-cell>Ganhos</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.earnings | currency:'MZN':'symbol':'1.0-2' }}</td>
+      </ng-container>
+      <ng-container matColumnDef="driverName">
+        <th *matHeaderCellDef mat-header-cell>Nome do Motorista</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.driverName }}</td>
+      </ng-container>
+      <ng-container matColumnDef="createdBy">
+        <th *matHeaderCellDef mat-header-cell>Criado Por</th>
+        <td *matCellDef="let carload" mat-cell>{{ carload.createdBy }}</td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th *matHeaderCellDef mat-header-cell>Ações</th>
+        <td *matCellDef="let carload" mat-cell>
+          <button [routerLink]="['/carload-detail', carload.id]" color="primary" mat-icon-button>
+            <i class="fas fa-eye"></i>
+          </button>
+          <button (click)="openEditDialog(carload.id, '0ms', '0ms')" color="accent" mat-icon-button>
+            <i class="fas fa-edit"></i>
+          </button>
+          <button (click)="confirmDeleteCarload(carload.id)" color="warn" mat-icon-button>
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </ng-container>
+      <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+      <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+    <mat-paginator
+      [length]="dataSource.data.length"
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      [pageSize]="10"
+      aria-label="Select page"
+    ></mat-paginator>
+  </div>
+</div>

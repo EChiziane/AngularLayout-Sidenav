@@ -27,6 +27,11 @@ export class DriverComponent implements OnInit {
   ) {
   }
 
+  ngAfterViewInit() {
+    // Configura o paginator após a tabela ser inicializada
+    this.dataSource.paginator = this.paginator;
+  }
+
   ngOnInit(): void {
     this.getDrivers();
   }

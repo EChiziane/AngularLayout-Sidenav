@@ -1,0 +1,33 @@
+<div class="login-container">
+  <mat-card>
+    <mat-card-title>Login</mat-card-title>
+    <mat-card-content>
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <mat-form-field appearance="outline">
+          <mat-label>Nome de usuário</mat-label>
+          <input formControlName="username" matInput placeholder="Insira seu nome de usuário" required>
+          <mat-error *ngIf="loginForm.get('username')?.hasError('required')">Nome de usuário é obrigatório</mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Senha</mat-label>
+          <input formControlName="password" matInput placeholder="Insira sua senha" required type="password">
+          <mat-error *ngIf="loginForm.get('password')?.hasError('required')">Senha é obrigatória</mat-error>
+        </mat-form-field>
+
+        <div class="login-actions">
+
+          <button (click)="onReset()" color="warn" mat-raised-button type="button">Cancelar</button>
+          <button [routerLink]="['/carload']" color="primary" mat-raised-button type="submit">Entrar</button>
+        </div>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <div class="login-links">
+        <a class="link" href="#">Não tem conta? Registrar</a>
+        <a class="link" href="#">Esqueceu a senha? Recuperar</a>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

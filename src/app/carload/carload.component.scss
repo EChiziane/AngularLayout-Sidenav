@@ -1,57 +1,63 @@
-.material-container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+html, body {
+  height: 100%;
   margin: 0;
+  padding: 0;
 }
 
-.material-header {
+.carload-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ocupa toda a altura da viewport */
+  margin: 0; /* Remove margens para evitar overflow */
+}
+
+.carload-header {
   background-color: #f8f9fa;
-  padding: 10px 0;
+  padding: 10px 0; /* Ajuste do padding para mais espaço */
   text-align: center;
   border-bottom: 1px solid #ddd;
-  height: 5%; /* Ajustado para coincidir com o DriverComponent */
+  height: 5%; /* Ocupa 5% do container */
   box-sizing: border-box;
 }
 
-.material-actions {
+.carload-actions {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-top: 10px;
-  height: 15%; /* Ajustado para coincidir com o DriverComponent */
+  margin-top: 10px; /* Espaço entre o header e as ações */
+  height: 15%; /* Ocupa 15% do container */
   box-sizing: border-box;
   padding: 0 20px;
 }
 
-.material-actions .search-input {
-  height: 26px;
-  padding: 6px 12px;
+.carload-actions .search-input {
+  height: 26px; /* Ajusta a altura para coincidir com a altura dos botões */
+  padding: 6px 12px; /* Ajusta o padding para coincidir com a altura dos botões */
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 0.75rem;
   margin-right: 10px;
 }
 
-.material-actions .search-input:focus {
+.carload-actions .search-input:focus {
   outline: none;
   border-color: #007bff;
 }
 
-.material-actions .add-material-button,
-.material-actions .print-button {
-  height: 36px;
+.carload-actions .add-carload-button,
+.carload-actions .print-button {
+  height: 36px; /* Ajusta a altura dos botões */
   font-size: 0.75rem;
 }
 
-.material-table-container {
-  flex: 1;
-  overflow: auto;
-  padding: 20px;
+.carload-table-container {
+  flex: 1; /* Ocupa o restante do espaço disponível */
+  overflow: auto; /* Permite rolagem interna se necessário */
+  padding: 20px; /* Espaço interno */
   box-sizing: border-box;
 }
 
-.material-table {
+.carload-table {
   width: 100%;
   background-color: #f1f1f1;
   border-radius: 8px;
@@ -93,11 +99,11 @@ tr.mat-row:hover {
 
 button.mat-icon-button {
   margin: 0 4px;
-  font-size: 0.75rem;
+  font-size: 0.75rem; /* Menor tamanho de fonte para os botões de ícones */
 }
 
 .mat-icon {
-  font-size: 0.875rem;
+  font-size: 0.875rem; /* Ajusta o tamanho dos ícones */
 }
 
 .snackbar-success {

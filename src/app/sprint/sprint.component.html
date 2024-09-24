@@ -1,0 +1,75 @@
+<div class="sprint-container">
+  <div class="sprint-header">
+    <h5>Lista de Sprints</h5>
+  </div>
+  <div class="sprint-actions">
+    <input
+      (keyup)="applyFilter($event)"
+      class="search-input"
+      placeholder="Pesquisar"
+      type="text"
+    />
+    <button
+      (click)="openDialog('0ms', '0ms')"
+      class="add-sprint-button"
+      color="primary"
+      mat-raised-button
+    >
+      <i class="fas fa-plus"></i> Adicionar Sprint
+    </button>
+  </div>
+  <div class="sprint-table-container">
+    <table [dataSource]="dataSource" class="sprint-table" mat-table>
+      <!-- Colunas da tabela -->
+      <ng-container matColumnDef="id">
+        <th *matHeaderCellDef mat-header-cell>No.</th>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th *matHeaderCellDef mat-header-cell>Nome</th>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th *matHeaderCellDef mat-header-cell>Status</th>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.status }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="numberCarLoad">
+        <th *matHeaderCellDef mat-header-cell>Número de Carradas</th>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.numberCarLoad }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="driverName">
+        <th *matHeaderCellDef mat-header-cell>Nome do Motorista</th>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.driverName }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="createdBy">
+        <th *matHeaderCellDef mat-header-cell>Criado Por</th>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.createdBy }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="createdAt">
+        <th *matHeaderCellDef mat-header-cell>Criado Em</th>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.createdAt | date }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th *matHeaderCellDef mat-header-cell>Ações</th>
+        <td *matCellDef="let sprint" mat-cell>
+          <button (click)="openEditDialog(sprint.id, '0ms', '0ms')" color="accent" mat-icon-button>
+            <i class="fas fa-edit"></i>
+          </button>
+          <button (click)="confirmDeleteSprint(sprint.id)" color="warn" mat-icon-button>
+            <i class="fas fa-trash"></i>
+          </button>
+        </td>
+      </ng-container>
+
+      <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+      <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+    </table>
+  </div>
+</div>

@@ -19,5 +19,7 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button (click)="onClose()" mat-button>Fechar</button>
-  <button (click)="createOrUpdateManager()" color="primary" mat-raised-button type="submit">{{ isEditMode ? 'Editar' : 'Adicionar' }}</button>
+  <button (click)="createOrUpdateManager()" color="primary" mat-raised-button
+          type="submit">{{ isEditMode ? 'Editar' : 'Adicionar' }}
+  </button>
 </mat-dialog-actions>

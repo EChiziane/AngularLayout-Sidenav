@@ -19,7 +19,7 @@ export class SprintService {
     return this.http.get<Sprint[]>(this.baseURL);
   }
 
-  public getSprintById(id: number): Observable<Sprint> {
+  public getSprintById(id: string): Observable<Sprint> {
     return this.http.get<Sprint>(`${this.baseURL}/${id}`);
   }
 
@@ -27,7 +27,7 @@ export class SprintService {
     return this.http.post<Sprint>(this.baseURL, sprint).pipe(take(1));
   }
 
-  public deleteSprint(id: number): Observable<Sprint> {
+  public deleteSprint(id: string): Observable<Sprint> {
     return this.http.delete<Sprint>(`${this.baseURL}/${id}`);
   }
 

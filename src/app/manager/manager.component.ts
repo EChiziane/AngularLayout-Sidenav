@@ -31,7 +31,7 @@ export class ManagerComponent implements OnInit {
     this.getManagers();
   }
 
- openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
+  openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
     const dialogRef = this.dialog.open(AddManagerComponent, {
       width: '550px',
       enterAnimationDuration,
@@ -77,7 +77,7 @@ export class ManagerComponent implements OnInit {
   public confirmDeleteManager(id: string): void {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       width: '400px',
-      data: { title: 'Confirmação', message: 'Você tem certeza que deseja apagar este gerente?' }
+      data: {title: 'Confirmação', message: 'Você tem certeza que deseja apagar este gerente?'}
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -86,6 +86,7 @@ export class ManagerComponent implements OnInit {
       }
     });
   }
+
   private deleteManager(id: string): void {
     this.managerService.deleteManager(id).subscribe(
       () => {

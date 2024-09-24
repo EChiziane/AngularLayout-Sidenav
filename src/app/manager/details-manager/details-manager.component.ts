@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Manager } from '../../../Model/manager';
-import { ManagerService } from '../../../Services/manager.service';
-import { ActivatedRoute } from '@angular/router';
+import {Component, Input, OnInit} from '@angular/core';
+import {Manager} from '../../../Model/manager';
+import {ManagerService} from '../../../Services/manager.service';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-details-manager',

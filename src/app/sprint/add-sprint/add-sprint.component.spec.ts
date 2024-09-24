@@ -1,18 +1,18 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {AddManagerComponent} from './add-manager.component';
+import {AddSprintComponent} from './add-sprint.component';
 
-describe('AddManagerComponent', () => {
-  let component: AddManagerComponent;
-  let fixture: ComponentFixture<AddManagerComponent>;
+describe('AddSprintComponent', () => {
+  let component: AddSprintComponent;
+  let fixture: ComponentFixture<AddSprintComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AddManagerComponent]
+      declarations: [AddSprintComponent]
     })
       .compileComponents();
 
-    fixture = TestBed.createComponent(AddManagerComponent);
+    fixture = TestBed.createComponent(AddSprintComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

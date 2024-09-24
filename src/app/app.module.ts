@@ -32,18 +32,30 @@ import {
   MatDatepickerModule,
   MatDatepickerToggle
 } from "@angular/material/datepicker";
-import {MatNativeDateModule} from "@angular/material/core";
+import {MatNativeDateModule, MatOption} from "@angular/material/core";
 import {MatDrawer, MatDrawerContainer, MatDrawerContent} from "@angular/material/sidenav";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {DetailsDriverComponent} from './driver/details-driver/details-driver.component';
 import {HttpClientModule} from "@angular/common/http";
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ConfirmDialogComponent} from './confirm-dialog/confirm-dialog.component';
-import { ManagerComponent } from './manager/manager.component';
-import { AddManagerComponent } from './manager/add-manager/add-manager.component';
-import { DetailsManagerComponent } from './manager/details-manager/details-manager.component';
-import { MaterialComponent } from './material/material.component';
-import { AddMaterialComponent } from './material/add-material/add-material.component';
+import {ManagerComponent} from './manager/manager.component';
+import {AddManagerComponent} from './manager/add-manager/add-manager.component';
+import {DetailsManagerComponent} from './manager/details-manager/details-manager.component';
+import {MaterialComponent} from './material/material.component';
+import {AddMaterialComponent} from './material/add-material/add-material.component';
+import {SprintComponent} from './sprint/sprint.component';
+
+import {AddSprintComponent} from './sprint/add-sprint/add-sprint.component';
+import {CotacaoComponent} from './cotacao/cotacao.component';
+import {MatIcon} from "@angular/material/icon";
+import {CarloadComponent} from './carload/carload.component';
+import {AddCarloadComponent} from './carload/add-carload/add-carload.component';
+import {MatSelect} from "@angular/material/select";
+import {LoginComponent} from './login/login.component';
+import {MatCard, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {CarloadDetailsComponent} from "./carload/details-carload/details-carload.component";
 
 
 @NgModule({
@@ -60,7 +72,15 @@ import { AddMaterialComponent } from './material/add-material/add-material.compo
     AddManagerComponent,
     DetailsManagerComponent,
     MaterialComponent,
-    AddMaterialComponent
+    AddMaterialComponent,
+    SprintComponent,
+    AddSprintComponent,
+    CotacaoComponent,
+    CarloadComponent,
+    AddCarloadComponent,
+    LoginComponent,
+    DashboardComponent,
+    CarloadDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -100,7 +120,16 @@ import { AddMaterialComponent } from './material/add-material/add-material.compo
     MatDrawerContainer,
     MatListItem,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    MatIcon,
+    MatSelect,
+    MatOption,
+    MatCardContent,
+    MatCardHeader,
+    MatCard,
+    MatCardModule,
+
 
   ],
   providers: [

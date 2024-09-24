@@ -1,5 +1,5 @@
-export interface CarLoad {
-  id: number;
+export interface Carload {
+  id: string;
   destination: string;
   clientNumber: string;
   earnings: number;

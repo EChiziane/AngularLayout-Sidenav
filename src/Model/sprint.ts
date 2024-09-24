@@ -2,7 +2,7 @@ import {SprintStatus} from "./sprint-status";
 
 
 export interface Sprint {
-  id: number;
+  id: string;
   name: string;
   status: SprintStatus;
   numberCarLoad: number;

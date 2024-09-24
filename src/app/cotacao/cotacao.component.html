@@ -1,0 +1,15 @@
+<div class="cotacao-container" id="print-area">
+  <h2>Cotação</h2>
+  <p><strong>Nome do Cliente:</strong> {{ nomeCliente }}</p>
+  <p><strong>Produto:</strong> {{ produto }}</p>
+</div>
+
+<div class="form-container">
+  <label for="nomeCliente">Nome do Cliente:</label>
+  <input [(ngModel)]="nomeCliente" id="nomeCliente" type="text">
+
+  <label for="produto">Produto:</label>
+  <input [(ngModel)]="produto" id="produto" type="text">
+
+  <button (click)="imprimirCotacao()">Imprimir Cotação</button>
+</div>

@@ -1,0 +1,108 @@
+<h2 class="centered-header" mat-dialog-title>{{ isEditMode ? 'Editar Carrada' : 'Adicionar Carrada' }}</h2>
+<mat-dialog-content class="mat-typography full-page-content">
+  <form (ngSubmit)="createOrUpdateCarload()" [formGroup]="carloadForm" class="full-width-form">
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome do Cliente</mat-label>
+      <input formControlName="clientName" matInput placeholder="Nome do Cliente">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Telefone do Cliente</mat-label>
+      <input formControlName="clientNumber" matInput placeholder="Telefone do Cliente">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Destino</mat-label>
+      <input formControlName="destination" matInput placeholder="Destino">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Ganhos</mat-label>
+      <input formControlName="earnings" matInput placeholder="Ganhos" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Despesas Totais</mat-label>
+      <input formControlName="totalExpenses" matInput placeholder="Despesas Totais" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Despesa com Combustível</mat-label>
+      <input formControlName="fuelExpense" matInput placeholder="Despesa com Combustível" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Despesa com Polícia</mat-label>
+      <input formControlName="policeExpense" matInput placeholder="Despesa com Polícia" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Despesas do Motorista</mat-label>
+      <input formControlName="driverExpenses" matInput placeholder="Despesas do Motorista" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Despesas do Gestor</mat-label>
+      <input formControlName="managerExpenses" matInput placeholder="Despesas do Gestor" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Montante da Compra</mat-label>
+      <input formControlName="purchaseMoney" matInput placeholder="Montante da Compra" type="number">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Portagem</mat-label>
+      <input formControlName="toll" matInput placeholder="Portagem" type="number">
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome do Gestor</mat-label>
+      <mat-select formControlName="managerId" placeholder="Nome do Gestor">
+        <mat-option *ngFor="let manager of managers" [value]="manager.id">
+          {{ manager.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome do Material</mat-label>
+      <mat-select formControlName="materialId" placeholder="Nome do Material">
+        <mat-option *ngFor="let material of materials" [value]="material.id">
+          {{ material.type }}
+        </mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome da Sprint</mat-label>
+      <mat-select formControlName="sprintId" placeholder="Nome da Sprint">
+        <mat-option *ngFor="let sprint of sprints" [value]="sprint.id">
+          {{ sprint.name }}
+        </mat-option>
+
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome do Motorista</mat-label>
+      <mat-select formControlName="driverId" placeholder="Selecione o Motorista">
+        <mat-option *ngFor="let driver of drivers" [value]="driver.id">
+          {{ driver.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button (click)="onClose()" mat-button>Fechar</button>
+  <button (click)="createOrUpdateCarload()" color="primary" mat-raised-button
+          type="submit">{{ isEditMode ? 'Editar' : 'Adicionar' }}
+  </button>
+</mat-dialog-actions>
+
+

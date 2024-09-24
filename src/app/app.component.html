@@ -1,11 +1,30 @@
 <mat-drawer-container class="example-container">
   <mat-drawer class="custom-drawer" mode="side" opened>
     <mat-nav-list>
-      <mat-list-item class="center-text" [routerLink]="['/driver']" >Driver</mat-list-item>
-      <mat-list-item class="center-text" [routerLink]="['/client']">Client</mat-list-item>
-      <mat-list-item class="center-text" [routerLink]="['/manager']">Manager</mat-list-item>
-      <mat-list-item class="center-text" [routerLink]="['/material']">Material</mat-list-item>
-      <mat-list-item class="center-text">Carload</mat-list-item>
+      <mat-list-item [routerLink]="['/driver']" class="center-text">
+        <mat-icon class="aligned-icon">directions_car</mat-icon>
+        <span>Driver</span>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/client']" class="center-text">
+        <mat-icon class="aligned-icon">person</mat-icon>
+        <span>Client</span>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/manager']" class="center-text">
+        <mat-icon class="aligned-icon">supervisor_account</mat-icon>
+        <span>Manager</span>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/material']" class="center-text">
+        <mat-icon class="aligned-icon">inventory</mat-icon>
+        <span>Material</span>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/sprint']" class="center-text">
+        <mat-icon class="aligned-icon">directions_run</mat-icon>
+        <span>Sprint</span>
+      </mat-list-item>
+      <mat-list-item [routerLink]="['/carload']" class="center-text">
+        <mat-icon class="aligned-icon">local_shipping</mat-icon>
+        <span>Carload</span>
+      </mat-list-item>
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>
@@ -15,3 +34,5 @@
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
+
+

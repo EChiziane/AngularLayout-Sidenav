@@ -1,9 +1,9 @@
-import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
-import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { FormControl, FormGroup } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { ManagerService } from '../../../Services/manager.service';
-import { Manager } from '../../../Model/manager';
+import {Component, EventEmitter, Inject, OnInit, Output} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
+import {FormControl, FormGroup} from '@angular/forms';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {ManagerService} from '../../../Services/manager.service';
+import {Manager} from '../../../Model/manager';
 
 @Component({
   selector: 'app-add-manager',

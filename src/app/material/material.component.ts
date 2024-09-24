@@ -1,12 +1,12 @@
-import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatTableDataSource } from '@angular/material/table';
-import { MatDialog } from '@angular/material/dialog';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { Material } from '../../Model/material';
-import { MaterialService } from '../../Services/material.service';
-import { AddMaterialComponent } from './add-material/add-material.component';
-import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
+import {ChangeDetectionStrategy, Component, OnInit, ViewChild} from '@angular/core';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatTableDataSource} from '@angular/material/table';
+import {MatDialog} from '@angular/material/dialog';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {Material} from '../../Model/material';
+import {MaterialService} from '../../Services/material.service';
+import {AddMaterialComponent} from './add-material/add-material.component';
+import {ConfirmDialogComponent} from '../confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-material',
@@ -24,7 +24,8 @@ export class MaterialComponent implements OnInit {
     private dialog: MatDialog,
     private materialService: MaterialService,
     private snackBar: MatSnackBar
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.getMaterials();
@@ -48,7 +49,7 @@ export class MaterialComponent implements OnInit {
         width: '550px',
         enterAnimationDuration,
         exitAnimationDuration,
-        data: { material }
+        data: {material}
       });
 
       dialogRef.componentInstance.materialAdded.subscribe(() => {
@@ -72,7 +73,7 @@ export class MaterialComponent implements OnInit {
   public confirmDeleteMaterial(id: string): void {
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       width: '400px',
-      data: { title: 'Confirmação', message: 'Você tem certeza que deseja apagar este material?' }
+      data: {title: 'Confirmação', message: 'Você tem certeza que deseja apagar este material?'}
     });
 
     dialogRef.afterClosed().subscribe(result => {

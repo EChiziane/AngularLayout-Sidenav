@@ -1,0 +1,27 @@
+<div class="carload-details-container">
+  <header class="header-section">
+    <h4>Detalhes da Carga</h4>
+  </header>
+  <div class="button-section">
+    <button [routerLink]="['/carload']" aria-label="Voltar para a lista de cargas" class="back-button">Voltar
+    </button>
+  </div>
+  <main *ngIf="carload" class="content-section">
+    <section class="carload-info">
+      <article class="info-column">
+        <p><strong>ID:</strong> {{ carload.id }}</p>
+        <p><strong>Cliente:</strong> {{ carload.clientName }}</p>
+        <p><strong>Telefone do Cliente:</strong> {{ carload.clientNumber }}</p>
+        <p><strong>Destino:</strong> {{ carload.destination }}</p>
+        <p><strong>Valor de Pedágio:</strong> {{ carload.toll }}</p>
+      </article>
+      <article class="info-column">
+        <p><strong>Ganhos:</strong> {{ carload.earnings }}</p>
+        <p><strong>Despesas:</strong> {{ carload.fuelExpense }}</p>
+        <p><strong>Motorista:</strong> {{ carload.driverName }}</p>
+        <p><strong>Gerente:</strong> {{ carload.managerName }}</p>
+        <p><strong>Criado Em:</strong> {{ carload.createdAt | date }}</p>
+      </article>
+    </section>
+  </main>
+</div>
