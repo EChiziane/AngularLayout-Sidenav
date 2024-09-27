@@ -15,7 +15,7 @@ import {ConfirmDialogComponent} from "../confirm-dialog/confirm-dialog.component
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DriverComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'birthDate', 'phoneNumber', 'vehiclePlate', 'vehicleModel', 'createdBy', 'createdAt', 'actions'];
+  displayedColumns: string[] = ['name', 'birthDate', 'phoneNumber', 'vehiclePlate', 'vehicleModel', 'createdBy', 'createdAt', 'actions'];
   dataSource = new MatTableDataSource<Driver>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

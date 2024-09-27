@@ -28,10 +28,6 @@
   <div class="manager-table-container">
     <table [dataSource]="dataSource" class="manager-table" mat-table>
       <!-- Colunas da tabela -->
-      <ng-container matColumnDef="id">
-        <th *matHeaderCellDef mat-header-cell>No.</th>
-        <td *matCellDef="let manager" mat-cell>{{ manager.id }}</td>
-      </ng-container>
       <ng-container matColumnDef="name">
         <th *matHeaderCellDef mat-header-cell>Nome</th>
         <td *matCellDef="let manager" mat-cell>{{ manager.name }}</td>

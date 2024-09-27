@@ -15,7 +15,7 @@ import {AddManagerComponent} from "./add-manager/add-manager.component";
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ManagerComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'phoneNumber', 'email', 'createdBy', 'createdAt', 'actions'];
+  displayedColumns: string[] = [ 'name', 'phoneNumber', 'email', 'createdBy', 'createdAt', 'actions'];
   dataSource = new MatTableDataSource<Manager>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

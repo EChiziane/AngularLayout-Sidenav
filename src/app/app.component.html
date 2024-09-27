@@ -1,6 +1,11 @@
+
 <mat-drawer-container class="example-container">
   <mat-drawer class="custom-drawer" mode="side" opened>
     <mat-nav-list>
+      <mat-list-item [routerLink]="['/carload']" class="center-text">
+        <mat-icon class="aligned-icon">local_shipping</mat-icon>
+        <span>Carload</span>
+      </mat-list-item>
       <mat-list-item [routerLink]="['/driver']" class="center-text">
         <mat-icon class="aligned-icon">directions_car</mat-icon>
         <span>Driver</span>
@@ -21,18 +26,15 @@
         <mat-icon class="aligned-icon">directions_run</mat-icon>
         <span>Sprint</span>
       </mat-list-item>
-      <mat-list-item [routerLink]="['/carload']" class="center-text">
-        <mat-icon class="aligned-icon">local_shipping</mat-icon>
-        <span>Carload</span>
-      </mat-list-item>
     </mat-nav-list>
   </mat-drawer>
   <mat-drawer-content>
-    <header class="main-header">Header Content</header>
     <div>
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
+
+
 
 

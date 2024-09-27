@@ -56,6 +56,7 @@ import {LoginComponent} from './login/login.component';
 import {MatCard, MatCardContent, MatCardHeader, MatCardModule} from "@angular/material/card";
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {CarloadDetailsComponent} from "./carload/details-carload/details-carload.component";
+import { InitialPageComponent } from './initial-page/initial-page.component';
 
 
 @NgModule({
@@ -80,7 +81,8 @@ import {CarloadDetailsComponent} from "./carload/details-carload/details-carload
     AddCarloadComponent,
     LoginComponent,
     DashboardComponent,
-    CarloadDetailsComponent
+    CarloadDetailsComponent,
+    InitialPageComponent
   ],
   imports: [
     BrowserModule,

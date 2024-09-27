@@ -24,7 +24,6 @@ export class AddCarloadComponent {
     destination: new FormControl(''),
     clientNumber: new FormControl(''),
     earnings: new FormControl<number>(0),
-    totalExpenses: new FormControl<number>(0),
     fuelExpense: new FormControl<number>(0),
     policeExpense: new FormControl<number>(0),
     driverExpenses: new FormControl<number>(0),
