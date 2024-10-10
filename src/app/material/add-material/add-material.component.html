@@ -3,12 +3,12 @@
   <form (ngSubmit)="createOrUpdateMaterial()" [formGroup]="profileForm" class="full-width-form">
     <mat-form-field appearance="outline" class="full-width-input">
       <mat-label>Nome</mat-label>
-      <input formControlName="name" matInput placeholder="Nome do Material">
+      <input formControlName="type" matInput placeholder="NTipo do Material">
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width-input">
-      <mat-label>Descrição</mat-label>
-      <input formControlName="description" matInput placeholder="Descrição do Material">
+      <mat-label>Preco do Material</mat-label>
+      <input formControlName="price" matInput placeholder="Preço do Material">
     </mat-form-field>
 
   </form>
