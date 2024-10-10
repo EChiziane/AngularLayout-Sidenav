@@ -57,6 +57,7 @@ import {MatCard, MatCardContent, MatCardHeader, MatCardModule} from "@angular/ma
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {CarloadDetailsComponent} from "./carload/details-carload/details-carload.component";
 import { InitialPageComponent } from './initial-page/initial-page.component';
+import {MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle} from "@angular/material/expansion";
 
 
 @NgModule({
@@ -131,6 +132,9 @@ import { InitialPageComponent } from './initial-page/initial-page.component';
     MatCardHeader,
     MatCard,
     MatCardModule,
+    MatExpansionPanelTitle,
+    MatExpansionPanelHeader,
+    MatExpansionPanel,
 
 
   ],

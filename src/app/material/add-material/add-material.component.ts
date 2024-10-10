@@ -13,10 +13,10 @@ import {Material} from '../../../Model/material';
 export class AddMaterialComponent implements OnInit {
   profileForm = new FormGroup({
     id: new FormControl(''),
-    name: new FormControl(''),
-    description: new FormControl(''),
-    quantity: new FormControl(''),
-    price: new FormControl('')
+   type: new FormControl(''),
+    price: new FormControl(0),
+    createdBy: new FormControl(''),
+    createdAt: new FormControl('')
   });
   isEditMode: boolean;
 

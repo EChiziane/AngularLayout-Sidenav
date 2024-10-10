@@ -10,6 +10,22 @@
   align-items: center;
 }
 
+
+.main-content {
+  padding-left: 20px;  /* Padding na esquerda */
+  padding-right: 20px; /* Padding na direita */
+  background-color: #fff; /* Cor de fundo, se necessário */
+}
+
+mat-drawer-content {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Garante que o padding seja incluído no tamanho total da caixa */
+}
+
+
+
 mat-drawer-content {
   width: 88%;
   display: flex;
@@ -54,4 +70,24 @@ mat-list-item:hover {
   font-size: 20px; /* Ajusta o tamanho do ícone para combinar com o texto */
   display: inline-flex;
   align-items: center; /* Garante que o ícone esteja alinhado verticalmente com o texto */
+}
+
+.custom-drawer {
+  width: 250px;
+}
+
+.center-text {
+  display: flex;
+  align-items: center;
+}
+
+/* Remover as bordas do mat-expansion-panel */
+mat-expansion-panel {
+  box-shadow: none;
+  border: none;
+}
+
+mat-expansion-panel-header {
+  border: none;
+  outline: none;
 }

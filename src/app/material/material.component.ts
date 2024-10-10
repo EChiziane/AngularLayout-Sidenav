@@ -15,7 +15,7 @@ import {ConfirmDialogComponent} from '../confirm-dialog/confirm-dialog.component
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MaterialComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'type', 'createdBy', 'createdAt', 'actions'];
+  displayedColumns: string[] = ['type','price', 'createdBy', 'createdAt', 'actions'];
   dataSource = new MatTableDataSource<Material>();
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;

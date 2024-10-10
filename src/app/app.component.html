@@ -1,40 +1,54 @@
-
 <mat-drawer-container class="example-container">
   <mat-drawer class="custom-drawer" mode="side" opened>
     <mat-nav-list>
-      <mat-list-item [routerLink]="['/carload']" class="center-text">
-        <mat-icon class="aligned-icon">local_shipping</mat-icon>
-        <span>Carload</span>
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/driver']" class="center-text">
-        <mat-icon class="aligned-icon">directions_car</mat-icon>
-        <span>Driver</span>
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/client']" class="center-text">
-        <mat-icon class="aligned-icon">person</mat-icon>
-        <span>Client</span>
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/manager']" class="center-text">
-        <mat-icon class="aligned-icon">supervisor_account</mat-icon>
-        <span>Manager</span>
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/material']" class="center-text">
-        <mat-icon class="aligned-icon">inventory</mat-icon>
-        <span>Material</span>
-      </mat-list-item>
-      <mat-list-item [routerLink]="['/sprint']" class="center-text">
-        <mat-icon class="aligned-icon">directions_run</mat-icon>
-        <span>Sprint</span>
-      </mat-list-item>
+      <!-- Conteúdo Principal -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon class="aligned-icon">folder</mat-icon>
+            <span>Conteúdo</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <!-- Submenu Conteúdo -->
+        <mat-list-item [routerLink]="['/carload']" class="center-text">
+          <mat-icon class="aligned-icon">local_shipping</mat-icon>
+          <span>Carload</span>
+        </mat-list-item>
+      </mat-expansion-panel>
+
+      <!-- Definições Principal -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon class="aligned-icon">settings</mat-icon>
+            <span>Definições</span>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <!-- Submenu Definições -->
+        <mat-list-item [routerLink]="['/manager']" class="center-text">
+          <mat-icon class="aligned-icon">supervisor_account</mat-icon>
+          <span>Manager</span>
+        </mat-list-item>
+        <mat-list-item [routerLink]="['/material']" class="center-text">
+          <mat-icon class="aligned-icon">inventory</mat-icon>
+          <span>Material</span>
+        </mat-list-item>
+        <mat-list-item [routerLink]="['/client']" class="center-text">
+          <mat-icon class="aligned-icon">person</mat-icon>
+          <span>Clients</span>
+        </mat-list-item>
+        <mat-list-item [routerLink]="['/sprint']" class="center-text">
+          <mat-icon class="aligned-icon">directions_run</mat-icon>
+          <span>Sprint</span>
+        </mat-list-item>
+      </mat-expansion-panel>
     </mat-nav-list>
   </mat-drawer>
+
   <mat-drawer-content>
-    <div>
+    <div class="main-content">
       <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
-
-
-
 
