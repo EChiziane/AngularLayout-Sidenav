@@ -11,6 +11,7 @@ import {CarloadComponent} from "./carload/carload.component";
 import {LoginComponent} from "./login/login.component";
 import {CarloadDetailsComponent} from "./carload/details-carload/details-carload.component";
 import {DetailsMaterialsComponent} from "./material/details-materials/details-materials.component";
+import {DetailsSprintComponent} from "./sprint/details-sprint/details-sprint.component";
 
 
 const routes: Routes = [
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'material', component: MaterialComponent},
   {path: 'material-detail/:id', component: DetailsMaterialsComponent},
   {path: 'sprint', component: SprintComponent},
+  {path: 'sprint-detail/:id', component: DetailsSprintComponent},
   {path: 'carload', component: CarloadComponent},
   {path: 'cotacao', component: CotacaoComponent},
   {path: '', component: LoginComponent},

@@ -61,9 +61,8 @@ export class SprintComponent implements OnInit {
     });
   }
 
-  openEditDialog(id: string, enterAnimationDuration: string, exitAnimationDuration: string): void {
-    const sprint = this.dataSource.data.find(s => s.id === id);
-    if (sprint) {
+  openEditDialog(springId: string, enterAnimationDuration: string, exitAnimationDuration: string): void {
+    this.sprintService.getSprintById(springId).subscribe((sprint: Sprint) => {
       const dialogRef = this.dialog.open(AddSprintComponent, {
         width: '400px',
         data: sprint,
@@ -71,12 +70,11 @@ export class SprintComponent implements OnInit {
         exitAnimationDuration
       });
 
-      dialogRef.afterClosed().subscribe(result => {
-        if (result) {
-          this.getAllSprints();
-        }
+      dialogRef.componentInstance.sprintAdded.subscribe(() => {
+        this.getAllSprints();
       });
-    }
+
+    });
   }
 
   confirmDeleteSprint(id: string): void {
