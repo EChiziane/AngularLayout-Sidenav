@@ -4,6 +4,8 @@ import {SprintService} from "../../../Services/sprint.service";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {Sprint} from "../../../Model/sprint";
+import {Driver} from "../../../Model/driver";
+import {DriverService} from "../../../Services/driver.service";
 
 @Component({
   selector: 'app-add-sprint',
@@ -14,6 +16,7 @@ export class AddSprintComponent implements OnInit {
   profileForm = new FormGroup({
     id: new FormControl(''),
     name: new FormControl(''),
+    driverId: new FormControl(''),
     startDate: new FormControl(''),
     endDate: new FormControl(''),
     createdBy: new FormControl(''),
@@ -24,6 +27,7 @@ export class AddSprintComponent implements OnInit {
   @Output() sprintAdded = new EventEmitter<void>();
 
   constructor(
+    private driverService: DriverService,
     private sprintService: SprintService,
     private snackBar: MatSnackBar,
     public dialogRef: MatDialogRef<AddSprintComponent>,
@@ -36,7 +40,19 @@ export class AddSprintComponent implements OnInit {
     }
   }
 
+  protected drivers!: Driver[];
+
   ngOnInit(): void {
+    this.getDrivers();
+  }
+
+  public getDrivers(): void {
+    this.driverService.getDriver().subscribe((drivers: Driver[]) => {
+        this.drivers = drivers;
+      },
+      (error) => {
+        console.error('Erro ao obter a lista de Motoristas', error);
+      });
   }
 
   public createOrUpdateSprint(): void {

@@ -14,6 +14,15 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline" class="full-width-input">
+      <mat-label>Nome do Motorista</mat-label>
+      <mat-select formControlName="driverId" placeholder="Selecione o Motorista">
+        <mat-option *ngFor="let driver of drivers" [value]="driver.id">
+          {{ driver.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width-input">
       <mat-label>Data de Término</mat-label>
       <input formControlName="endDate" matInput [matDatepicker]="endPicker" placeholder="Data de Término">
       <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
