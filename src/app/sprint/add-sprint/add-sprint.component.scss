@@ -1,0 +1,51 @@
+.centered-header {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+.full-width-form {
+  width: 100%;
+}
+
+.full-width-input {
+  width: 100%;
+}
+
+.full-page-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 80vh;
+  overflow: auto;
+  box-sizing: border-box;
+}
+
+mat-dialog-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: calc(80vh - 80px);
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+mat-form-field {
+  margin-bottom: 16px;
+}
+
+mat-form-field .mat-form-field-outline {
+  border-radius: 8px;
+}
+
+mat-form-field .mat-form-field-outline.mat-focused {
+  border-color: #007bff;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 16px;
+}

@@ -58,6 +58,7 @@ import {DashboardComponent} from './dashboard/dashboard.component';
 import {CarloadDetailsComponent} from "./carload/details-carload/details-carload.component";
 import {InitialPageComponent} from './initial-page/initial-page.component';
 import {MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle} from "@angular/material/expansion";
+import { DetailsMaterialsComponent } from './material/details-materials/details-materials.component';
 
 
 @NgModule({
@@ -83,7 +84,8 @@ import {MatExpansionPanel, MatExpansionPanelHeader, MatExpansionPanelTitle} from
     LoginComponent,
     DashboardComponent,
     CarloadDetailsComponent,
-    InitialPageComponent
+    InitialPageComponent,
+    DetailsMaterialsComponent
   ],
   imports: [
     BrowserModule,

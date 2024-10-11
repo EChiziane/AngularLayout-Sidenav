@@ -1,0 +1,20 @@
+<div class="material-details-container">
+  <header class="header-section">
+    <h4>Detalhes do Material</h4>
+  </header>
+  <div class="button-section">
+    <button [routerLink]="['/material']" aria-label="Voltar para a lista de materiais" class="back-button">Voltar
+    </button>
+  </div>
+  <main *ngIf="material" class="content-section">
+    <section class="material-info">
+      <article class="info-column">
+        <p><strong>ID:</strong> {{ material.id }}</p>
+        <p><strong>Tipo:</strong> {{ material.type }}</p>
+        <p><strong>Preço:</strong> {{ material.price | currency }}</p>
+        <p><strong>Criado por:</strong> {{ material.createdBy }}</p>
+        <p><strong>Criado em:</strong> {{ material.createdAt | date }}</p>
+      </article>
+    </section>
+  </main>
+</div>

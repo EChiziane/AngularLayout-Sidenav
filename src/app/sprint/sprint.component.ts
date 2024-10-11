@@ -14,11 +14,10 @@ import {AddSprintComponent} from "./add-sprint/add-sprint.component"; // Compone
 })
 export class SprintComponent implements OnInit {
   displayedColumns: string[] = [
-    'id',
     'name',
     'status',
     'numberCarLoad',
-    'driverName',
+    'driver',
     'createdBy',
     'createdAt',
     'actions'
@@ -55,10 +54,10 @@ export class SprintComponent implements OnInit {
       exitAnimationDuration
     });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (result) {
+    dialogRef.componentInstance.sprintAdded.subscribe(() => {
+
         this.getAllSprints();
-      }
+
     });
   }
 

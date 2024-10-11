@@ -21,10 +21,6 @@
   <div class="sprint-table-container">
     <table [dataSource]="dataSource" class="sprint-table" mat-table>
       <!-- Colunas da tabela -->
-      <ng-container matColumnDef="id">
-        <th *matHeaderCellDef mat-header-cell>No.</th>
-        <td *matCellDef="let sprint" mat-cell>{{ sprint.id }}</td>
-      </ng-container>
 
       <ng-container matColumnDef="name">
         <th *matHeaderCellDef mat-header-cell>Nome</th>
@@ -41,9 +37,9 @@
         <td *matCellDef="let sprint" mat-cell>{{ sprint.numberCarLoad }}</td>
       </ng-container>
 
-      <ng-container matColumnDef="driverName">
+      <ng-container matColumnDef="driver">
         <th *matHeaderCellDef mat-header-cell>Nome do Motorista</th>
-        <td *matCellDef="let sprint" mat-cell>{{ sprint.driverName }}</td>
+        <td *matCellDef="let sprint" mat-cell>{{ sprint.driver }}</td>
       </ng-container>
 
       <ng-container matColumnDef="createdBy">

@@ -10,6 +10,7 @@ import {CotacaoComponent} from "./cotacao/cotacao.component";
 import {CarloadComponent} from "./carload/carload.component";
 import {LoginComponent} from "./login/login.component";
 import {CarloadDetailsComponent} from "./carload/details-carload/details-carload.component";
+import {DetailsMaterialsComponent} from "./material/details-materials/details-materials.component";
 
 
 const routes: Routes = [
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'manager', component: ManagerComponent},
   {path: 'manager-detail/:id', component: DetailsManagerComponent},
   {path: 'material', component: MaterialComponent},
+  {path: 'material-detail/:id', component: DetailsMaterialsComponent},
   {path: 'sprint', component: SprintComponent},
   {path: 'carload', component: CarloadComponent},
   {path: 'cotacao', component: CotacaoComponent},

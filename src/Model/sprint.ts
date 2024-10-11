@@ -6,7 +6,7 @@ export interface Sprint {
   name: string;
   status: SprintStatus;
   numberCarLoad: number;
-  driverName: string;
+  driver: string;
   createdBy: string;
   createdAt: string;
 }

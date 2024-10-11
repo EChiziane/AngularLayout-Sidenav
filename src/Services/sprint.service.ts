@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {take} from "rxjs/operators";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../environments/environments";
+import {FormControl, ɵFormGroupValue, ɵTypedOrUntyped} from "@angular/forms";
 
 @Injectable({
   providedIn: 'root'
@@ -29,6 +30,24 @@ export class SprintService {
 
   public deleteSprint(id: string): Observable<Sprint> {
     return this.http.delete<Sprint>(`${this.baseURL}/${id}`);
+  }
+
+  updateSprint(sprint: ɵTypedOrUntyped<{
+    id: FormControl<string | null>;
+    name: FormControl<string | null>;
+    startDate: FormControl<string | null>;
+    endDate: FormControl<string | null>;
+    createdBy: FormControl<string | null>;
+    createdAt: FormControl<string | null>;
+  }, ɵFormGroupValue<{
+    id: FormControl<string | null>;
+    name: FormControl<string | null>;
+    startDate: FormControl<string | null>;
+    endDate: FormControl<string | null>;
+    createdBy: FormControl<string | null>;
+    createdAt: FormControl<string | null>;
+  }>, any>): Observable<Sprint> {
+    return this.http.put<Sprint>(`${this.baseURL}/${sprint.id}`, sprint);
   }
 
 
